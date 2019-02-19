@@ -1,0 +1,71 @@
+/*styles go here*/
+
+/*p {
+    color: red;
+}*/
+
+#container{
+	background-color: #A6DFF5;
+	width: 95%;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	}
+
+p {
+	color: #2A85A8;
+    font-family:"Merriweather Sans", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-family: "Merriweather", Georgia, "Times New Roman", serif;
+		color: #17485C;
+}
+
+h2 {
+	font-family: "Merriweather", Georgia, "Times New Roman", serif;
+	color: #17485C;
+}
+
+body {
+	background-color: #fff;
+}
+
+#nav {
+    padding: 0;
+	  list-style-type: none;
+}
+
+#nav li {
+    margin: 0;
+    padding: 0;
+	  border-bottom: 1px solid #ccc;
+}
+
+#nav a:link, #nav a:visited {
+	  display:block;
+    color: #ffffff;
+    background-color: #2A85A8;
+    font-weight: bold;
+    text-align:center;
+    text-decoration: none;
+    padding: 4px;
+    font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
+}
+
+#nav a:hover, #nav a:active {
+    background-color: #17485C;
+}
+
+#footer {
+    color: #2A85A8;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+		font-style: italic;
+		font-size: 0.8em;
+    border-top: 1px solid #17485C;
+}
+
+img {
+	border: none;
+}
