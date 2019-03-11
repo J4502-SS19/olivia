@@ -35,6 +35,8 @@ body {
 #nav {
     padding: 0;
 	  list-style-type: none;
+		display: flex;
+		flex-direction: column;
 }
 
 #nav li {
@@ -68,4 +70,11 @@ body {
 
 img {
 	border: none;
+}
+
+@media (min width: 600 px) {
+	#nav {
+		flex-direction: row;
+		justify-content: center;
+	}
 }
