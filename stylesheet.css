@@ -28,8 +28,11 @@ h2 {
 	color: #17485C;
 }
 
-body {
-	background-color: #A6DFF5;
+.pullquote {
+  font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
+  font-size: 1.25em;
+  font-style: italic;
+  line-height: 1.25;
 }
 
 #nav {
@@ -52,13 +55,20 @@ body {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    padding: 4px;
+		padding: 6px;
     font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
 }
 
 #nav a:hover, #nav a:active {
     background-color: #17485C;
 }
+
+.caption {
+    font-size: 0.7em;
+    text-align: right;
+    margin-top: 0;
+    font-style: italic;
+	}
 
 #footer {
     color: #2A85A8;
@@ -68,13 +78,99 @@ body {
     border-top: 1px solid #17485C;
 }
 
-img {
-	border: none;
+.picturebox img {
+	display: none;
 }
 
-@media (min-width: 600px) {
+.pullquote {
+  display: none;
+}
+
+article {
+  margin-bottom: 0.7em;
+  border-bottom: 1px solid #ccc;
+}
+
+article:last-of-type {
+  border-bottom: none;
+}
+
+@media screen and (min-width: 600px) {
 	#nav {
 		flex-direction: row;
 		justify-content: flex-end;
 	}
+
+	#container {
+    width: 80%
+  }
+
+  .picturebox img {
+    display: block;
+    width: 100%;
+    margin-top: 0.5em;
+  }
+
+  .picturebox {
+    width: 25%;
+    max-width: 200px;
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 800px){
+	.pullquote {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+  article {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas:
+        "a b b"
+        "c c e"
+        ". d d";
+  }
+
+	.picturebox {
+    width: 100%;
+    grid-area: a;
+  }
+
+  .section1 {
+    grid-area: b;
+  }
+
+  .image {
+    grid-area: c;
+  }
+
+  .section2 {
+    grid-area: d;
+  }
+
+	.pullquote {
+		margin-top: 0;
+		grid-area: e;
+	}
+
+	.section1 p:first-of-type, .section2 p:first-of-type {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  article {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas:
+        "a b b e"
+        "c c c ."
+        ". d d .";
+  }
 }
