@@ -122,7 +122,6 @@ article:last-of-type {
 
     nav ul {
         display: flex;
-				justify-content: space-around;
     }
 
     nav ul li {
@@ -130,8 +129,16 @@ article:last-of-type {
     }
 
     .menu-trigger {
-        display: none;
+        visibility: hidden;
     }
+
+		header h1 {
+			order: 1;
+		}
+
+		nav {
+			order: 2;
+		}
 }
 
 @media screen and (min-width: 1000px) {
