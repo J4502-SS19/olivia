@@ -1,0 +1,165 @@
+/*styles go here*/
+/*p {
+    color: red;
+}*/
+p {
+	color: #2A85A8;
+    font-family:"Merriweather Sans", Helvetica, Arial, sans-serif;
+}
+h1 {
+    font-family: "Merriweather", Georgia, "Times New Roman", serif;
+		color: white;
+}
+h2 {
+	font-family: "Merriweather", Georgia, "Times New Roman", serif;
+	color: #17485C;
+}
+.pullquote {
+  font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
+  font-size: 1.25em;
+  font-style: italic;
+  line-height: 1.25;
+}
+nav ul li {
+    display: block;
+    border-top: 1px #17485C solid;
+}
+header {
+    display: flex;
+    flex-flow: row;
+    background-color: #2A85A8;
+		margin: 0;
+		padding: 0;
+}
+.menu-trigger {
+    order: 1;
+    font-size: 2.4em;
+    width: 2em;
+}
+header h1 {
+    order: 2;
+    font-size: 2em;
+}
+nav ul {
+    display: none;
+}
+nav a:link, a:visited {
+		display: block;
+		color: #ffffff;
+    background-color: #2A85A8;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+		padding: 6px;
+    font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
+}
+nav a:hover, a:active {
+    background-color: #17485C;
+	}
+.caption {
+    font-size: 0.7em;
+    text-align: right;
+    margin-top: 0;
+    font-style: italic;
+	}
+#footer {
+    color: #2A85A8;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+		font-style: italic;
+		font-size: 0.8em;
+    border-top: 1px solid #17485C;
+}
+.picturebox img {
+	display: none;
+}
+.pullquote {
+  display: none;
+}
+article {
+  margin-bottom: 0.7em;
+  border-bottom: 1px solid #ccc;
+}
+article:last-of-type {
+  border-bottom: none;
+}
+@media screen and (min-width: 700px){
+	.picturebox img {
+		display: block;
+		width: 100%;
+		margin-top: 0.5em;
+	}
+	.picturebox {
+		width: 25%;
+		max-width: 200px;
+		float: left;
+		margin-right: 20px;
+	}
+	.pullquote {
+		display: block;
+	}
+
+    nav ul {
+        display: flex;
+				justify-content: space-around;
+    }
+
+    nav ul li {
+        border-top: none;
+    }
+
+    .menu-trigger {
+        display: none;
+        visibility: hidden;
+    }
+
+		header h1 {
+			order: 1;
+		}
+
+		nav {
+			order: 2;
+		}
+}
+
+@media screen and (min-width: 1000px) {
+ article {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas:
+        "a b b"
+        "c c e"
+        ". d d";
+  }
+    .picturebox {
+    width: 100%;
+    grid-area: a;
+  }
+  .section1 {
+    grid-area: b;
+  }
+  .image {
+ grid-area: c;
+  }
+  .section2 {
+    grid-area: d;
+  }
+    .pullquote {
+        margin-top: 0;
+        grid-area: e;
+    }
+    .section1 p:first-of-type, .section2 p:first-of-type {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width:1200px) {
+  article {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 200px;
+    grid-gap: 20px;
+    grid-template-areas:
+        "a b b e"
+        "c c c ."
+        ". d d .";
+  }
+}
